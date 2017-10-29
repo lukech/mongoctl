@@ -67,8 +67,7 @@ def copy_sample_configs():
 
         if not os.path.exists(dot_mongoctl_dir):
             os.makedirs(dot_mongoctl_dir)
-        else:
-            return True
+        # even if .mongoctl dir exists, there're cases sample files not created 
 
         os.chown(dot_mongoctl_dir, owner_uid, owner_gid)
         os.chmod(dot_mongoctl_dir, 00755)
